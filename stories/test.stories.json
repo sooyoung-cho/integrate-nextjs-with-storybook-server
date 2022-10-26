@@ -1,0 +1,21 @@
+{
+  "title": "Example/Test",
+  "parameters": {
+    "server": { "id": "hello" }
+  },
+  "args": { "label": "hello" },
+  "argTypes": {
+    "label": { "control": "text" },
+    "primary": { "control": "boolean" },
+    "backgroundColor": { "control": "color" },
+    "size": {
+      "control": { "type": "select", "options": ["small", "medium", "large"] }
+    }
+  },
+  "stories": [
+    {
+      "name": "Primary",
+      "args": { "primary": true }
+    }
+  ]
+}
