@@ -5,9 +5,9 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/api2/:path*',
-        destination: 'http://localhost:6006/api/:path*'
-      }
+        source: "/api/:path*",
+        destination: "http://localhost:6006/api/:path*",
+      },
     ];
   },
 };
