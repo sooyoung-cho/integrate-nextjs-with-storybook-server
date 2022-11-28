@@ -1,9 +1,9 @@
- {
+{
   "title": "Example/Button",
   "parameters": {
-    "server": { "id": "Button2" }
+    "server": { "id": "button" }
   },
-  "args": { "label": "Button2" },
+  "args": { "label": "button" },
   "argTypes": {
     "label": { "control": "text" },
     "primary": { "control": "boolean" },

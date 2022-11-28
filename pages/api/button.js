@@ -1,8 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import NextCors from "nextjs-cors";
 import React from "react";
-import ReactDOM from "react-dom/server";
-import { Button333 } from "../Button2";
+import ReactDOMServer from "react-dom/server";
+import ButtonView from "../Button2";
 
 async function handler(req, res) {
   // Run the cors middleware
@@ -15,13 +15,17 @@ async function handler(req, res) {
   });
 
   // Rest of the API logic
-  //  res.json({ message: 'Hello NextJs Cors!' });
-  // res.render( <Button333>default</Button333>);
-  console.log(res);
+  const { measureEnabled, outline, label, size, backgroundColor } = req.query;
+  console.log("query!!!", label);
 
   res.send(
-    ReactDOM.renderToString(
-      <Button333 onClick={console.log("hello")}>default</Button333>
+    ReactDOMServer.renderToString(
+      <ButtonView
+        label={label}
+        size={size}
+        outline={outline}
+        backgroundColor={backgroundColor}
+      />
     )
   );
 }

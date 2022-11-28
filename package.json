@@ -2,6 +2,7 @@
   "name": "storybook-server",
   "version": "0.1.0",
   "private": true,
+  "proxy": "*",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +12,10 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@stitches/react": "^1.2.8",
+    "emotion": "^11.0.0",
     "next": "12.3.1",
     "nextjs-cors": "^2.1.1",
     "react": "18.2.0",
@@ -25,8 +29,10 @@
     "@storybook/builder-webpack5": "^6.5.12",
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/server": "^6.5.12",
+    "@types/react": "18.0.23",
     "babel-loader": "^8.2.5",
     "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1"
+    "eslint-config-next": "12.3.1",
+    "typescript": "4.8.4"
   }
 }
